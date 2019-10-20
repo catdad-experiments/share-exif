@@ -40,7 +40,7 @@ html, body {
 }
 
 .limit {
-  width: 96%;
+  width: 100%;
   max-width: var(--limit);
   margin-left: auto;
   margin-right: auto;
@@ -64,6 +64,7 @@ html, body {
 .main img {
   display: block;
   max-height: 30vh;
+  padding: 30px;
 }
 .main .info {
   display: flex;
@@ -83,15 +84,32 @@ html, body {
   word-wrap: break-word;
 }
 .main .info .cell.key {
-  width: 33%;
-  text-align: end;
+  width: 35%;
+  text-align: right;
+  opacity: 0.5;
+  font-size: 0.9em;
 }
 .main .info .cell.value {
-  width: 66%;
-  flex-grow: 2;
+  width: 65%;
+  font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 600px) {
+  .main .info .row {
+    flex-direction: column;
+  }
+
+  .main .info .cell.cell {
+    text-align: left;
+    width: 100%;
+  }
+  .main .info .cell.value {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
 }
 
 /* TOAST STYLE */
