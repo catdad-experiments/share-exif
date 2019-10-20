@@ -2,7 +2,7 @@
 
 // this is needed to create a binary-different file when
 // I don't need to make any actual changes to this file
-const VERSION = 'v1.0.1';
+const VERSION = 'v1.0.2';
 const WORKER = '👷';
 const KEY = 'share-exif-v1';
 const PATHS = [
@@ -44,7 +44,6 @@ const createCache = async () => {
 };
 
 const clearCache = async () => {
-  log('CLEARING CACHE');
   await caches.delete(KEY);
 };
 
