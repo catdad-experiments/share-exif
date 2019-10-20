@@ -44,9 +44,11 @@ export default ({ events }) => {
       await loadUrl(img, url);
       const exif = await readExif(img);
 
-      for (let name in exif) {
-        table.appendChild(row(name, exif[name]));
-      }
+      const keys = Object.keys(exif).sort();
+
+      keys.forEach(key => {
+        table.appendChild(row(key, exif[key]));
+      });
     } catch (e) {
       events.emit('warn', e.message);
     } finally {
