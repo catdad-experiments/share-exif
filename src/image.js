@@ -35,19 +35,23 @@ const row = (name, value) => {
 
 export default ({ events }) => {
   const img = find('#image');
-  const table = find('#info');
+  const info = find('#info');
 
   const onOpen = async ({ file }) => {
+    delete img.exifdata;
+    delete img.iptcdata;
+
     const url = URL.createObjectURL(file);
 
     try {
       await loadUrl(img, url);
       const exif = await readExif(img);
 
-      const keys = Object.keys(exif).sort();
+      info.innerHTML = '';
 
+      const keys = Object.keys(exif).sort();
       keys.forEach(key => {
-        table.appendChild(row(key, exif[key]));
+        info.appendChild(row(key, exif[key]));
       });
     } catch (e) {
       events.emit('warn', e.message);
@@ -56,7 +60,7 @@ export default ({ events }) => {
     }
 
     img.classList.remove('hide');
-    table.classList.remove('hide');
+    info.classList.remove('hide');
   };
 
   events.on('open', onOpen);
