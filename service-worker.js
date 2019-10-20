@@ -18,8 +18,6 @@ const PATHS = [
   './manifest.json',
 //  './assets/icon-512.png',
   // cdn files
-  'https://fonts.googleapis.com/icon?family=Material+Icons',
-  'https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2',
   'https://cdn.jsdelivr.net/npm/toastify-js@1.6.1/src/toastify.min.css',
   'https://cdn.jsdelivr.net/npm/toastify-js@1.6.1/src/toastify.min.js',
   'https://cdn.jsdelivr.net/npm/exif-js@2.3.0/exif.min.js',
