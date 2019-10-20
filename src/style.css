@@ -31,6 +31,7 @@ a.github-corner {
   height: 80px;
   fill: var(--foreground);
   overflow: hidden;
+  z-index: 100;
 }
 
 .unsupported {
