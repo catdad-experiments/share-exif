@@ -64,15 +64,26 @@ html, body {
   max-height: 30vh;
 }
 .main .info {
-  display: block;
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
   flex-grow: 1;
 }
 .main .info .row {
-  padding: 0 10px;
+  padding: 10px 0;
+  display: flex;
 }
 .main .info .cell {
+  padding: 0 10px;
   word-wrap: break-word;
+}
+.main .info .cell.key {
+  width: 33%;
+  text-align: end;
+}
+.main .info .cell.value {
+  width: 66%;
+  flex-grow: 2;
 }
 
 /* TOAST STYLE */
