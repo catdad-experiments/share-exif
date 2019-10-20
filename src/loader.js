@@ -43,8 +43,7 @@ if ('serviceWorker' in navigator) {
     }
 
     if (data.action === 'load-image') {
-      console.log('LOAD IMAGE!!');
-      events.emit('display-image', { file: data.file });
+      events.emit('open', { file: data.file });
     }
 
     console.log('worker message', ev.data);

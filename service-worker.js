@@ -2,9 +2,9 @@
 
 // this is needed to create a binary-different file when
 // I don't need to make any actual changes to this file
-const VERSION = 'v1.0.1';
+const VERSION = 'v1.0.0';
 const WORKER = '👷';
-const KEY = 'share-edit-v1';
+const KEY = 'share-exif-v1';
 const PATHS = [
   './',
   // modules
@@ -16,7 +16,7 @@ const PATHS = [
   // style and assets
   './src/style.css',
   './manifest.json',
-//  './assets/icon-512.png',
+  './assets/icon-512.png',
   // cdn files
   'https://cdn.jsdelivr.net/npm/toastify-js@1.6.1/src/toastify.min.css',
   'https://cdn.jsdelivr.net/npm/toastify-js@1.6.1/src/toastify.min.js',
