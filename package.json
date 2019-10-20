@@ -1,0 +1,27 @@
+{
+  "name": "share-exif",
+  "version": "1.0.0",
+  "description": "share-exif",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx multispawn npx serve -l 9000 ! npx localtunnel --port 9000"
+  },
+  "author": "Kiril Vatev <vatev.1@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "localtunnel": "^2.0.0",
+    "multispawn": "^1.0.0",
+    "serve": "^11.2.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catdad-experiments/share-exif.git"
+  },
+  "bugs": {
+    "url": "https://github.com/catdad-experiments/share-exif/issues"
+  },
+  "homepage": "https://github.com/catdad-experiments/share-exif#readme"
+}

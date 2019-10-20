@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Share Exif</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#202124">
+  <link rel="icon" type="image/png" href="assets/icon-512.png" />
+  <link rel="stylesheet" type="text/css" href="src/style.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/toastify-js@1.6.1/src/toastify.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="unsupported limit">
+    <p>This browser is not supported.</p>
+    <p>See the <a href="https://github.com/catdad-experiments/share-exif">GitHub page</a> for more info.</p>
+  </div>
+
+  <div class="container hide">
+    <div class="main limit">
+      <div class="renderer">
+        <i class="material-icons" id="open">photo</i>
+        <input type="file" id="open-input" class="hide" />
+        <img src="" alt="" id="image" class="display hide" />
+        <table id="info" class="hide"></table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/exif-js@2.3.0/exif.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.6.1/src/toastify.min.js"></script>
+  <script type="module">
+    import loader from './src/loader.js';
+    document.querySelector('.unsupported').remove();
+    document.querySelector('.container').classList.remove('hide');
+    window.addEventListener('load', function () {
+      loader();
+    });
+  </script>
+  <script src="/analytics.js" async></script>
+</body>
+
+</html>
