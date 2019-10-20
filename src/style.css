@@ -23,6 +23,16 @@ html, body {
   box-sizing: border-box;
 }
 
+a.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  fill: var(--foreground);
+  overflow: hidden;
+}
+
 .unsupported {
   text-align: center;
 }
