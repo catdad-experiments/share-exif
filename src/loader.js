@@ -38,15 +38,11 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('message', (ev) => {
     const data = ev.data;
 
-    if (data.action === 'log') {
-      return void console.log('worker:', ...data.args);
-    }
-
     if (data.action === 'load-image') {
       events.emit('open', { file: data.file });
     }
 
-    console.log('worker message', ev.data);
+    console.log('worker message', data);
   });
 }
 
