@@ -11,6 +11,7 @@ export default ({ events }) => {
     }
 
     events.emit('open', { file: ev.target.files[0] });
+    openButton.classList.add('hide');
   };
 
   openButton.addEventListener('click', onClick);

@@ -49,6 +49,9 @@ export default ({ events }) => {
     } finally {
       URL.revokeObjectURL(url);
     }
+
+    img.classList.remove('hide');
+    table.classList.remove('hide');
   };
 
   events.on('open', onOpen);
