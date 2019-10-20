@@ -1,6 +1,7 @@
 :root {
   --controls-height: 3em;
   --background: #202124;
+  --background2: #28292d;
   --middleground: #777777;
   --foreground: #e5e5e5;
   --full: calc(var(--vh, 1vh) * 100);
@@ -39,6 +40,7 @@ html, body {
 }
 
 .limit {
+  width: 96%;
   max-width: var(--limit);
   margin-left: auto;
   margin-right: auto;
@@ -73,6 +75,9 @@ html, body {
   padding: 10px 0;
   display: flex;
 }
+.main .info .row:nth-child(even) {
+  background: var(--background2);
+}
 .main .info .cell {
   padding: 0 10px;
   word-wrap: break-word;
@@ -84,6 +89,9 @@ html, body {
 .main .info .cell.value {
   width: 66%;
   flex-grow: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* TOAST STYLE */
