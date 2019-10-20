@@ -19,15 +19,18 @@ const readExif = (img) => {
 };
 
 const row = (name, value) => {
-  const tr = document.createElement('tr');
-  const nameCell = document.createElement('td');
-  const valueCell = document.createElement('td');
+  const div = document.createElement('div');
+  div.classList.add('row');
+  const nameCell = document.createElement('span');
+  const valueCell = document.createElement('span');
+  nameCell.className = 'cell key';
+  valueCell.className = 'cell value';
   nameCell.appendChild(document.createTextNode(name));
   valueCell.appendChild(document.createTextNode(value));
-  tr.appendChild(nameCell);
-  tr.appendChild(valueCell);
+  div.appendChild(nameCell);
+  div.appendChild(valueCell);
 
-  return tr;
+  return div;
 };
 
 export default ({ events }) => {

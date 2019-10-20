@@ -63,16 +63,15 @@ html, body {
   display: block;
   max-height: 30vh;
 }
-.main table {
+.main .info {
   display: block;
   max-width: 100%;
   flex-grow: 1;
-  table-layout: fixed;
 }
-.main table tr {
+.main .info .row {
   padding: 0 10px;
 }
-.main table td {
+.main .info .cell {
   word-wrap: break-word;
 }
 
