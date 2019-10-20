@@ -1,7 +1,7 @@
 const find = selector => document.querySelector(selector);
 
 export default ({ events }) => {
-  const openButton = find('#open');
+  const openButton = find('#image');
   const openInput = find('#open-input');
 
   const onClick = () => void openInput.click();
@@ -11,7 +11,6 @@ export default ({ events }) => {
     }
 
     events.emit('open', { file: ev.target.files[0] });
-    openButton.classList.add('hide');
   };
 
   openButton.addEventListener('click', onClick);
