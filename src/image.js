@@ -53,6 +53,13 @@ export default ({ events }) => {
       keys.forEach(key => {
         info.appendChild(row(key, exif[key]));
       });
+
+      if (keys.length === 0) {
+        const msg = document.createElement('div');
+        msg.className = 'message';
+        msg.appendChild(document.createTextNode('this image has no EXIF data'));
+        info.appendChild(msg);
+      }
     } catch (e) {
       events.emit('warn', e.message);
     } finally {
