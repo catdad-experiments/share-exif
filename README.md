@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://catdad-experiments.github.io/share-exif/assets/icon.svg" width="200px" alt="logo" />
+  <a href="https://catdad-experiments.github.io/share-exif/">
+    <img src="https://catdad-experiments.github.io/share-exif/assets/icon.svg" width="200px" alt="logo" />
+  </a>
 </p>
 
 # share exif

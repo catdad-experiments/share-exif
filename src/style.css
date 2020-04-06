@@ -120,6 +120,14 @@ a.github-corner {
   text-overflow: ellipsis;
 }
 
+.main .info .heading {
+  line-height: 2.2;
+  text-align: center;
+  font-weight: bold;
+  font-variant: small-caps;
+  border-bottom: 1px solid var(--foreground);
+}
+
 @media only screen and (max-width: 600px) {
   .main .info .row {
     flex-direction: column;
