@@ -37,12 +37,15 @@
     </div>
   </div>
 
+  <script type="module">
+    document.querySelector('.unsupported').remove();
+    document.querySelector('.container').classList.remove('hide');
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/exif-js@2.3.0/exif.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.6.1/src/toastify.min.js"></script>
   <script type="module">
     import loader from './src/loader.js';
-    document.querySelector('.unsupported').remove();
-    document.querySelector('.container').classList.remove('hide');
+
     window.addEventListener('load', function () {
       loader();
     });
