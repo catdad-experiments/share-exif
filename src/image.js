@@ -33,6 +33,24 @@ const row = (name, value) => {
   return div;
 };
 
+const heading = text => {
+  const div = document.createElement('div');
+  div.classList.add('heading');
+  div.appendChild(document.createTextNode(`---- ${text} ----`));
+
+  return div;
+};
+
+const importantKeys = [
+  'ApertureValue',
+  'FNumber',
+  'FocalLength',
+  'FocalLengthIn35mmFilm',
+  'Make',
+  'Model',
+  'ShutterSpeedValue',
+].sort();
+
 export default ({ events }) => {
   const img = find('#image');
   const info = find('#info');
@@ -50,15 +68,26 @@ export default ({ events }) => {
       info.innerHTML = '';
 
       const keys = Object.keys(exif).sort();
-      keys.forEach(key => {
-        info.appendChild(row(key, exif[key]));
-      });
 
       if (keys.length === 0) {
         const msg = document.createElement('div');
         msg.className = 'message';
         msg.appendChild(document.createTextNode('this image has no EXIF data'));
         info.appendChild(msg);
+      } else {
+        info.appendChild(heading('Quick Summary'));
+
+        importantKeys.forEach(key => {
+          if (exif[key]) {
+            info.appendChild(row(key, exif[key]));
+          }
+        });
+
+        info.appendChild(heading('All Exif Data'));
+
+        keys.forEach(key => {
+          info.appendChild(row(key, exif[key]));
+        });
       }
     } catch (e) {
       events.emit('warn', e.message);
