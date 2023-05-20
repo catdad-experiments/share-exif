@@ -13,7 +13,7 @@
     "eslint": "^5.16.0",
     "localtunnel": "^2.0.2",
     "multispawn": "^1.0.0",
-    "serve": "^11.3.0"
+    "serve": "^14.2.0"
   },
   "dependencies": {},
   "repository": {
